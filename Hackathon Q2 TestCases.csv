@@ -1,0 +1,20 @@
+﻿Test Case ID,Automation Class Name,Automation Method Name,Pre- Conditions,Test Scenario Summary,Test Data,Test Case,Expected Results
+TC_SMIT_01,PortalAuthenticationTest,loginPortal,N/A,Login to the SMIT portal,"Username: welldocsu
+Password: welldoc123
+","1) Navigate to the Welldoc SMIT Portal
+2)Enter the Username and Password to login",System should allow the user to successfully login if they provided the correct credentials
+TC_SMIT_02,PatientSearchTest,verifyPatientSearch,UUser should be logged into SMIT Portal and be on the default Patient List Tab ,Search user using search field,"Username: welldocsu
+Password: welldoc123
+PatientName: Adam382 Eve382",1)Enter patient's valid first name and search,System should allow to search user with first name
+TC_SMIT_03,PatientSearchTest,verifyPatientSearch,User should be logged into SMIT Portal and be on the default Patient List Tab ,Search user using search field,"Username: welldocsu
+Password: welldoc123
+PatientName: Adam382 Eve382",1)Enter patient's valid Last name and search,System should display the correct user in the search result
+TC_SMIT_04,PatientSearchTest,verifyPatientSearch,User should be logged into SMIT Portal and be on the default Patient List Tab ,Search user using search field,"Username: welldocsu
+Password: welldoc123
+PatientName: Adam382 Eve382",1)Enter both valid first name and valid last name and search,System should display the correct user in the search result
+TC_SMIT_05,PortalNavigationTest,verifyMessageTab,User should be logged into SMIT Portal and be on the default Patient List Tab ,Navigate to Messages tab,"Username: welldocsu
+Password: welldoc123
+",1)Click on Messages tab to navigate,System should correctly navigate to the Messages tab
+TC_SMIT_06,PortalNavigationTest,verifyDashboardNavigation,User should be logged into SMIT Portal,Navigate to Dashboard,"Username: welldocsu
+Password: welldoc123
+",1)Click on Dashboard or Home tab to navigate,System should correctly navigate to the Dashboard page

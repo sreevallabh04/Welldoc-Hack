@@ -6,17 +6,6 @@
     <listener class-name="org.testng.reporters.XMLReporter"/>
     <listener class-name="org.testng.reporters.JUnitReportReporter"/>
   </listeners>
-  <test thread-count="5" name="Portal Authentication Tests(failed)" verbose="0">
-    <classes>
-      <class name="tests.PortalAuthenticationTest">
-        <methods>
-          <include name="loginPortal"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-        </methods>
-      </class> <!-- tests.PortalAuthenticationTest -->
-    </classes>
-  </test> <!-- Portal Authentication Tests(failed) -->
   <test thread-count="5" name="Patient Search Tests(failed)" verbose="0">
     <classes>
       <class name="tests.PatientSearchTest">

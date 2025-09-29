@@ -3,7 +3,12 @@
 
 <suite name="SMIT Portal Automation Test Suite" verbose="1">
     
-    <!-- Test classes -->
+    <!-- Test Suite for global browser session management -->
+    <listeners>
+        <listener class-name="tests.TestSuite"/>
+    </listeners>
+    
+    <!-- Test classes - all will share the same browser session -->
     <test name="Portal Authentication Tests">
         <classes>
             <class name="tests.PortalAuthenticationTest"/>

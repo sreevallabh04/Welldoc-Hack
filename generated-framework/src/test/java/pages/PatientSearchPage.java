@@ -5,11 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class PatientSearchPage extends BasePage {
 
-    // TODO: Verify locator for search criteria input field
-    private final By searchCriteriaField = By.xpath("");
-
-    // TODO: Verify locator for search button
-    private final By searchButton = By.xpath("");
+    private final By searchCriteriaField = By.id("NameSearch");
+    private final By searchButton = By.xpath("//span[contains(text(),'Search') or @data-localize='Main.Search']");
 
     public PatientSearchPage(WebDriver driver) {
         super(driver);

@@ -13,5 +13,6 @@ util\ExcelReader.class
 generator\FullFrameworkGenerator.class
 generator\LLMTest.class
 pages\MessagePage.class
+tests\TestSuite.class
 generator\LLMCodeGenerator.class
 util\ExcelReader$1.class
