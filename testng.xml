@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="SMIT Portal Automation Test Suite" verbose="1">
+    
+    <!-- Test classes -->
+    <test name="Portal Authentication Tests">
+        <classes>
+            <class name="tests.PortalAuthenticationTest"/>
+        </classes>
+    </test>
+    
+    <test name="Patient Search Tests">
+        <classes>
+            <class name="tests.PatientSearchTest"/>
+        </classes>
+    </test>
+    
+    <test name="Portal Navigation Tests">
+        <classes>
+            <class name="tests.PortalNavigationTest"/>
+        </classes>
+    </test>
+    
+    <!-- Parameters for browser selection -->
+    <parameter name="browser" value="chrome"/>
+    
+    <!-- Listeners for test execution -->
+    <listeners>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+        <listener class-name="org.testng.reporters.JUnitReportReporter"/>
+    </listeners>
+    
+</suite>

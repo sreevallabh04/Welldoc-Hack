@@ -1,0 +1,59 @@
+Test Case ID,Automation Class Name,Automation Method Name,Pre-Conditions,Test Scenario Summary,Test Data,Test Case (steps),Expected Results
+TC_SMIT_01,PortalAuthenticationTest,loginPortal,User has valid credentials,Login to SMIT Portal,Username: welldocsu
+Password: welldoc123,"1. Navigate to https://azqa21-dsm.testwd.com/SMITPortal/Guest/Login.htm
+2. Enter username welldocsu
+3. Enter password welldoc123
+4. Click on Login",System should allow the user to successfully login
+TC_SMIT_02,PortalAuthenticationTest,loginWithInvalidCredentials,User has invalid credentials,Login with Invalid Credentials,Username: invaliduser
+Password: invalidpass,"1. Navigate to https://azqa21-dsm.testwd.com/SMITPortal/Guest/Login.htm
+2. Enter username invaliduser
+3. Enter password invalidpass
+4. Click on Login",System should display error message for invalid credentials
+TC_SMIT_03,PortalAuthenticationTest,loginWithEmptyCredentials,User has empty credentials,Login with Empty Credentials,Username: 
+Password: ,"1. Navigate to https://azqa21-dsm.testwd.com/SMITPortal/Guest/Login.htm
+2. Leave username field empty
+3. Leave password field empty
+4. Click on Login",System should display validation error for empty fields
+TC_SMIT_04,PortalAuthenticationTest,validateLoginPageElements,User is on login page,Login Page Elements Validation,,"1. Navigate to https://azqa21-dsm.testwd.com/SMITPortal/Guest/Login.htm
+2. Verify login form is displayed
+3. Verify username field is present
+4. Verify password field is present
+5. Verify login button is present",All required login page elements should be visible
+TC_SMIT_05,PatientSearchTest,searchPatient,User is logged in,Search for Patient,Search Criteria: John Doe,"1. Login to SMIT Portal
+2. Navigate to Patient Search page
+3. Enter search criteria John Doe
+4. Click Search button
+5. Verify search results are displayed",Search results should be displayed for the patient
+TC_SMIT_06,PatientSearchTest,searchWithEmptyCriteria,User is logged in,Search with Empty Criteria,Search Criteria: ,"1. Login to SMIT Portal
+2. Navigate to Patient Search page
+3. Leave search criteria empty
+4. Click Search button",System should handle empty search gracefully
+TC_SMIT_07,PatientSearchTest,searchWithSpecialCharacters,User is logged in,Search with Special Characters,Search Criteria: Test@#$%^&*(),"1. Login to SMIT Portal
+2. Navigate to Patient Search page
+3. Enter special characters in search
+4. Click Search button",System should handle special characters appropriately
+TC_SMIT_08,PatientSearchTest,testPatientSearchPageNavigation,User is logged in,Patient Search Page Navigation,,"1. Login to SMIT Portal
+2. Navigate to Patient Search page
+3. Verify page title
+4. Verify navigation elements
+5. Test page functionality",Patient search page should be accessible and functional
+TC_SMIT_09,PortalNavigationTest,navigateToPatientSearch,User is logged in,Navigate to Patient Search,,"1. Login to SMIT Portal
+2. Click on Patient Search link
+3. Verify patient search page loads
+4. Verify page elements are present",Should successfully navigate to patient search page
+TC_SMIT_10,PortalNavigationTest,navigateToMessagePage,User is logged in,Navigate to Message Page,,"1. Login to SMIT Portal
+2. Click on Message link
+3. Verify message page loads
+4. Verify page elements are present",Should successfully navigate to message page
+TC_SMIT_11,PortalNavigationTest,testPortalHomeNavigation,User is logged in,Portal Home Navigation,,"1. Login to SMIT Portal
+2. Navigate to different pages
+3. Click on Home link
+4. Verify home page loads",Should successfully navigate to home page
+TC_SMIT_12,PortalNavigationTest,testPortalDashboardNavigation,User is logged in,Portal Dashboard Navigation,,"1. Login to SMIT Portal
+2. Click on Dashboard link
+3. Verify dashboard page loads
+4. Verify dashboard elements",Should successfully navigate to dashboard
+TC_SMIT_13,PortalNavigationTest,testPortalLogoutNavigation,User is logged in,Portal Logout Navigation,,"1. Login to SMIT Portal
+2. Click on Logout link
+3. Verify logout is successful
+4. Verify redirect to login page",Should successfully logout and redirect to login page
